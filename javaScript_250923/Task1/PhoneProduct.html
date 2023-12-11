@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body >
+    <h1 style="text-align: center;color: #F4F489;"  id="#blink">ProductInformation</h1>
+    
+    <form style="padding-left:50px;" name="myForm" onsubmit="return validateForm()" >
+        <label for="ProductName" id="lab">ProductName:</label><tab>&nbsp;
+        <input type="text" id="xyz" name="ProductName"><br><br><br>
+        <label for="ProductPrice" id="lab">ProductPrice:</label><tab>&nbsp;&nbsp;
+        <input type="number" id="inp" name="Price">
+        <br>
+        <br>
+        <label for="ProductType" id="lab">Choose a Product Type</label><tab>&nbsp;&nbsp;&nbsp;
+  <select name="Product" id="Productss">
+    <option value="Book">Book</option>
+    <option value="Electronics">Electronics</option>
+    <option value="Dress">Dress</option>
+    <option value="Furniture">Furniture</option>
+    <option value="Others">Others</option>
+  </select>
+  <br>
+  <br>
+  <label for="ProductLaunchDate" id="lab">Product Launch Date</label>&nbsp;&nbsp;
+  <input type="datetime-local" id="inp">
+  <br>
+  <br>
+  <label for="SupportEmail" id="lab">Support-Email</label><tab>&nbsp;&nbsp;
+  <input type="email" id="inp" name="Hemail" >
+
+  <br>
+  <br>
+  <label id="lab" >Description</label><tab>&nbsp;&nbsp;
+  <input type="text" id="inp" >
+  <br>
+  <br>
+  <label id="lab">User Type?</label>
+  <input type="radio" id="html" name="user" value="Existing user">
+  <label for="html">Existing User</label>&nbsp;
+  <input type="radio" id="css" name="user" value="New User">
+  <label for="css">New User</label>
+<br>
+<br>
+<label id="lab" for="Support">Support</label>
+<tab>&nbsp;&nbsp;
+<input type="checkbox" value="Online">Online
+<input type="checkbox" value="offline">Offline
+<br>
+<br>
+<input type="submit">
+      </form>
+    </div>
+    <p id="display_message">hello how are u</p>
+    <script src="index.js"></script>
+    
+</body>
+</html>

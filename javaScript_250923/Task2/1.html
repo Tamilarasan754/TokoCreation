@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Loading Data from External File using Ajax in jQuery</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#box").load("2.html #joker,#hint");
+    });
+});
+</script>
+</head>
+<body>
+    <div id="box">
+        <h2>Click button to load new content inside DIV box</h2>
+        <p>David Allen's breakthrough organization book <cite>Getting Things Done</cite> has taken the web by storm.</p>
+        <label for="showtimes">Showtimes</label>
+<select id="showtimes" name="showtimes"> 
+    <optgroup label="1PM">
+        <option value="titanic">Twister</option> 
+        <option value="nd">Napoleon Dynamite</option> 
+        <option value="wab">What About Bob?</option> 
+    </optgroup> 
+    <optgroup label="2PM">
+        <option value="bkrw">Be Kind Rewind</option> 
+        <option value="stf">Stranger Than Fiction</option> 
+    </optgroup> 
+</select>
+The microblogging site <acronym title="Founded in 2006"> Twitter</acronym> has recently struggled with downtimes.
+<address>Glen Stansberry
+    1234 Web Dev Lane
+    Anywhere, USA
+    </address>
+    <hr>
+    John <del>likes</del> <ins>LOVES</ins> his new iPod.
+
+    </div>
+    <button type="button">Load Content</button>
+</body>
+</html>
