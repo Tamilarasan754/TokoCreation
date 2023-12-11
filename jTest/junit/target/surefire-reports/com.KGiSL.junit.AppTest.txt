@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.KGiSL.junit.AppTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 5.099 s <<< FAILURE! - in com.KGiSL.junit.AppTest
+testWithTimeout  Time elapsed: 5.04 s  <<< ERROR!
+java.util.concurrent.TimeoutException: testWithTimeout() timed out after 5 seconds
+
