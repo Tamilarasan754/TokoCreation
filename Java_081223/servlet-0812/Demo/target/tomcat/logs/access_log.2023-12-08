@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [08/Dec/2023:18:30:32 +0530] "GET / HTTP/1.1" 200 477 http-bio-9090-exec-1 427
+0:0:0:0:0:0:0:1 - - [08/Dec/2023:18:30:42 +0530] "POST /Register HTTP/1.1" 200 544 http-bio-9090-exec-3 249
+0:0:0:0:0:0:0:1 - - [08/Dec/2023:18:32:42 +0530] "GET /DisplayDataServlet HTTP/1.1" 200 536 http-bio-9090-exec-5 13
+0:0:0:0:0:0:0:1 - - [08/Dec/2023:18:33:07 +0530] "GET /DisplayDataServlet HTTP/1.1" 200 536 http-bio-9090-exec-7 4
