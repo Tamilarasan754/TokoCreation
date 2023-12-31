@@ -1,0 +1,136 @@
+<p>sportclub works!</p>
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+    <label for="fullName" >Full Name: </label>
+    <input id="fullName" type="text" formControlName="fullName" />
+  
+    <div
+      *ngIf="signUpForm.get('fullName')?.invalid && (signUpForm.get('fullName')?.dirty || signUpForm.get('fullName')?.touched)"
+    >
+      <div *ngIf="signUpForm.get('fullName')?.errors?.['required']">
+        Full Name is required.
+      </div>
+      <div *ngIf="signUpForm.get('fullName')?.errors?.['minlength']">
+        Full Name must be at least 5 characters long.
+      </div>
+    </div>
+    <br />
+</div>
+<div class="form-group">
+    <label for="dateOfBirth">Date of Birth: </label>
+    <input id="dateOfBirth" type="date" formControlName="dateOfBirth" />
+  
+    <div
+      *ngIf="signUpForm.get('dateOfBirth')?.invalid && (signUpForm.get('dateOfBirth')?.dirty || signUpForm.get('dateOfBirth')?.touched)"
+    >
+      <div *ngIf="signUpForm.get('dateOfBirth')?.errors?.['required']">
+        Date of Birth is required.
+      </div>
+    </div>
+    <br />
+</div>
+<div class="form-group">
+  <label>Gender:</label>
+  <div class="form-check">
+    <input id="male" type="radio" class="form-check-input" value="Male" formControlName="gender" />
+    <label for="male" class="form-check-label">Male</label>
+  </div>
+  <div class="form-check">
+    <input id="female" type="radio" class="form-check-input" value="Female" formControlName="gender" />
+    <label for="female" class="form-check-label">Female</label>
+  </div>
+  <div class="form-check">
+      <input id="other" type="radio" class="form-check-input" value="other" formControlName="gender" />
+      <label for="other" class="form-check-label">Other</label>
+    </div>
+  <div *ngIf="signUpForm.get('gender')?.invalid && (signUpForm.get('gender')?.dirty || signUpForm.get('gender')?.touched)" class="text-danger">
+    Gender is required.
+  </div>
+</div>
+<div class="form-group">
+    <label for="address">Address: </label>
+    <input id="address" type="text" formControlName="address" />
+  
+    <div *ngIf="signUpForm.get('address')?.invalid && (signUpForm.get('address')?.dirty || signUpForm.get('address')?.touched)">
+        <div *ngIf="signUpForm.get('address')?.errors?.['required']">
+          Address is required.
+        </div>
+        <div *ngIf="signUpForm.get('address')?.errors?.['minlength']">
+          Address must be at least 5 characters long.
+        </div>
+      </div>
+      
+    <br />
+</div>
+<div class="form-group">
+     <label for="email">Email: </label>
+    <input id="email" type="text" formControlName="email" />
+  
+  <div *ngIf="signUpForm.get('email')?.invalid && (signUpForm.get('email')?.dirty || signUpForm.get('email')?.touched)">
+  <div *ngIf="signUpForm.get('email')?.hasError('required')">
+    Email is required.
+  </div>
+  <div *ngIf="signUpForm.get('email')?.hasError('email')">
+    Please enter a valid email address.
+  </div>
+</div>
+<br/>
+</div>
+<div class="form-group">
+  
+    <label for="contactNumber">Contact Number: </label>
+    <input id="contactNumber" type="text" formControlName="contactNumber" />
+  
+    <div *ngIf="signUpForm.get('contactNumber')?.invalid && (signUpForm.get('contactNumber')?.dirty || signUpForm.get('contactNumber')?.touched)">
+        <div *ngIf="signUpForm.get('contactNumber')?.hasError('required')">
+          Contact Number is required.
+        </div>
+        <div *ngIf="signUpForm.get('contactNumber')?.hasError('minlength')">
+          Contact Number must be at least 10 digits long.
+        </div>
+      </div>
+      
+    <br />
+</div>
+  <div class="form-group">
+    <label for="sportsPreference">Sports Preference: </label>
+    <input id="sportsPreference" type="text" formControlName="sportsPreference" />
+  
+    <!-- Add validations for other fields as needed -->
+</div>
+<div class="form-group">
+    <label for="skillLevel">Skill Level: </label>
+    <input id="skillLevel" type="text" formControlName="skillLevel" />
+  
+    <!-- Add validations for other fields as needed -->
+</div>
+<div class="form-group">
+  <label for="membershipType">Membership Type: </label>
+  
+  <select id="membershipType" formControlName="membershipType">
+    <option value="" disabled>Select Membership Type</option>
+    <option value="basic">Basic</option>
+    <option value="premium">Premium</option>
+    <!-- Add other membership types as needed -->
+  </select>
+  
+  <div *ngIf="signUpForm.get('membershipType')?.invalid && (signUpForm.get('membershipType')?.dirty || signUpForm.get('membershipType')?.touched)">
+    <div *ngIf="signUpForm.get('membershipType')?.hasError('required')">
+      Membership Type is required.
+    </div>
+    <!-- Add other validation messages as needed -->
+  </div>
+  
+  <br />
+</div>
+
+<div class="form-group">
+    <label for="emergencyContactNumber">Emergency Contact Number: </label>
+    <input id="emergencyContactNumber" type="text" formControlName="emergencyContactNumber" />
+  
+    <!-- Add validations for other fields as needed -->
+  
+</div>
+    <button type="submit" [disabled]="!signUpForm.valid">Submit Profile</button>
+</form>
+
